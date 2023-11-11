@@ -52,7 +52,14 @@ const cardArray = [
 
 cardArray.sort( () => 0.5 - Math.random () )//for shuffling array randomly
 
-console.log(cardArray)
-
 const gridDisplay = document.querySelector('#grid')
-console.log(gridDisplay)
+
+function createBoard(){
+    for(let i = 0; i < cardArray.length; i++){
+       const card = document.createElement('img')
+       card.setAttribute('src','img/cat.jpg')
+       card.setAttribute('data-id', i)
+       gridDisplay.append(card)
+    }
+}
+createBoard()
