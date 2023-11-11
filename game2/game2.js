@@ -101,7 +101,6 @@ function checkMatch (){
 function flipCard() {
     let cardID = this.getAttribute('data-id');
     if (!cardChoosenId.includes(cardID) && cardChoosenId.length < 2) {
-        // Check if the card is not already selected and there are less than 2 selected cards
         cardChoosen.push(cardArray[cardID].name);
         cardChoosenId.push(cardID);
         this.setAttribute('src', cardArray[cardID].img);
