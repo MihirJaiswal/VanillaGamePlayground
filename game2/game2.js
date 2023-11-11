@@ -53,8 +53,10 @@ const cardArray = [
 cardArray.sort( () => 0.5 - Math.random () )//for shuffling array randomly
 
 const gridDisplay = document.querySelector('#grid')
-const cardChoosen = []
-const cardChoosenId = []
+const resultDisplay = document.querySelector('#result')
+let cardChoosen = []
+let cardChoosenId = []
+const cardWon = []
 
 function createBoard(){
     for(let i = 0; i < cardArray.length; i++){
@@ -68,22 +70,44 @@ function createBoard(){
 createBoard()
 
 function checkMatch (){
-    const cards = document.querySelector('#grid img')
-    if(cardChoosen[0] == cardChoosen[1]){
-    alert('you found a match')
-    cards[cardChoosenId[0]].setAttribute('src', 'img/bg.png')
+    const cards = document.querySelectorAll('img')
+    const optionOneId = cardChoosenId[0]
+    const optionTwoId = cardChoosenId[1]
+    console.log(cards)
+    if(optionOneId === optionTwoId){
+        cards[optionOneId].setAttribute('src', 'img/cat.jpg')
+        cards[optionTwoId].setAttribute('src', 'img/cat.jpg')
+        alert('you have clicked on same images')
+    }
+    if(cardChoosen[0]== cardChoosen[1]){
+        cards[optionOneId].setAttribute('src', 'img/bg.png')
+        cards[optionTwoId].setAttribute('src', 'img/bg.png')
+        cards[optionOneId].removeEventListener("click", flipCard)
+        cards[optionTwoId].removeEventListener("click", flipCard)
+        cardWon.push(cardChoosen)
+   } else {
+        cards[optionOneId].setAttribute('src', 'img/cat.jpg')
+        cards[optionTwoId].setAttribute('src', 'img/cat.jpg')
+   }
+   resultDisplay.innerHTML = cardWon.length
+   cardChoosen = []
+   cardChoosenId = []
+    
+   if(cardWon.length ==(cardArray.length)/2){
+    resultDisplay.innerHTML = 'Congrats you found them all'
    }
 }
 
 function flipCard() {
-    let cardID =  this.getAttribute('data-id')
-    console.log(cardArray[cardID].name)
-    cardChoosen.push(cardArray[cardID].name)
-    cardChoosenId.push(cardID)
-    console.log(cardChoosen)
-    console.log(cardChoosenId)
-    this.setAttribute('src', cardArray[cardID].img)
-    if(cardChoosen.length ===2){
-       setTimeout(checkMatch, 500)
+    let cardID = this.getAttribute('data-id');
+    if (!cardChoosenId.includes(cardID) && cardChoosenId.length < 2) {
+        // Check if the card is not already selected and there are less than 2 selected cards
+        cardChoosen.push(cardArray[cardID].name);
+        cardChoosenId.push(cardID);
+        this.setAttribute('src', cardArray[cardID].img);
+    }
+
+    if (cardChoosenId.length === 2) {
+        setTimeout(checkMatch, 500);
     }
 }
