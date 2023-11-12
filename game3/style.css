@@ -16,13 +16,13 @@ body {
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(3, 200px); /* 3 columns */
+    grid-template-columns: repeat(3, 150px); /* 3 columns */
     grid-gap: 20px; /* Gap between squares */
 }
 
 .square {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     background-color: #ffffff; 
     color: #fff; 
     line-height: 100px;
