@@ -16,33 +16,31 @@ body {
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(3, 150px); /* 3 columns */
+    grid-template-columns: repeat(3, 200px); /* 3 columns */
     grid-gap: 20px; /* Gap between squares */
 }
 
 .square {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     background-color: #ffffff; 
     color: #fff; 
-    font-size: 24px;
-    text-align: center;
     line-height: 100px;
     cursor: pointer;
     border: 2px solid rgb(0, 0, 0); 
 }
 
+.mole{
+    background-image: url(img/diglett.jpg);
+}
+
 h2 {
-    font-size: 20px;
+    font-size: 25px;
     margin: 10px 0;
 }
 
 #score, #time-left {
-    font-size: 44px;
+    font-size: 24px;
     font-weight: bold;
 }
 
-.square:hover {
-    background-color: #e74c3c; 
-    border-color: #c0392b; 
-}
