@@ -41,9 +41,6 @@ body{
 }
 
 #score {
-    text-align: center;
-    font-size: 34px;
-    font-weight: bold;
     color: #f7f5f5;
-    margin-top: 10px;
+    
 }
