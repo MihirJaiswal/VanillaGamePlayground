@@ -1,1 +1,1 @@
-# GitGaze
+# javascriptgames
