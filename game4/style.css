@@ -3,13 +3,31 @@
     width: 560px;
     height: 300px;
     border: solid black 1px;
+    margin-top: 90px;
 }
 
-.block{
+.block {
     position: absolute;
-    width: 100px;
+    width: 100px; /* Set the width of your blocks */
+    height: 20px; /* Set the height of your blocks */
+    background-color: #00f; /* Set the background color of the blocks */
+    border: 1px solid #fff; /* Add a border to the blocks */
+    box-sizing: border-box; /* Include border in block size */
+}
+
+.user {
+    position: absolute;
+    width: 100px; /* Set the width of your blocks */
+    height: 20px; /* Set the height of your blocks */
+    background-color: rgb(203, 5, 111); /* Set the background color of the blocks */
+    border: 1px solid #fff; 
+
+}
+
+.ball{
+    position: absolute;
+    width: 20px;
     height: 20px;
-    background-color: blue;
-    left: 50px;
-    bottom: 50px;
+    border-radius: 50px;
+    background-color: red;
 }
