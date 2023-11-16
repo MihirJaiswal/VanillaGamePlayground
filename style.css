@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url(images/bg.jpg);
+    background-position: inherit;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: blur(05px);
+    z-index: -1;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    text-align: center;
+}
+/* Style the heading */
+/* .heading {
+    text-align: center;
+    color: #333;
+}
+
+/* Style the game boxes */
+ .box {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.game {
+    background-color: rgba(249, 242, 242, 0.8);
+    padding: 30px;
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 600px;
+    height: 250px;;
+
+}
+
+.game:hover{
+    transform: scale(1.08);
+}
+
+.name{
+    font-size: 20px;
+    font-weight: 1000;
+}
+
+img {
+    height: 130px;
+    width: 130px;
+    border-radius: 80px;
+}
+
+
+ 
+.button {
+    background-color: rgba(248, 245, 245, 0.1); 
+    
+    top: 20px;
+    height: 40px;
+    width: 140px;
+    color: #000000;
+    padding: 10px 20px;
+    margin: 10px;
+    border: 2px solid black;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.button:hover {
+    background-color: #000000; 
+    color: white;
+}
