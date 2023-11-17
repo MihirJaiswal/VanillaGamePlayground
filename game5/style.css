@@ -1,0 +1,13 @@
+.board {
+    width:200px;
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: yellow;
+}
+
+.blocks{
+    height: 20px;
+    width: 20px;
+    background-color: red;
+}
