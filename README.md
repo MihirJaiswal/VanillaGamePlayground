@@ -21,11 +21,9 @@ Experience the timeless Tetris challenge. Arrange falling blocks to complete lin
 
 
 Technologies Used
-HTML5
-CSS3
-JavaScript
+-HTML5
+-CSS3
+-JavaScript
 
 
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
 
